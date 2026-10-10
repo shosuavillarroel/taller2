@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matius Corp, empresa de programación y desarrollo de soluciones digitales.">
+    <title>Matius Corp | Catálogo y carrito</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="bg-blue-50">
+
+    <!-- ENCABEZADO -->
+    <header class="bg-white border-b border-blue-100 p-4">
+        <nav class="max-w-6xl mx-auto flex flex-wrap items-center justify-center md:justify-between gap-3 text-blue-900" aria-label="Menú principal">
+            <a href="#inicio" class="font-bold text-xl text-blue-700">&lt;/&gt; Matius Corp</a>
+            <a href="#inicio" class="hover:bg-blue-50 px-4 py-2 rounded-lg">Inicio</a>
+            <a href="#nosotros" class="hover:bg-blue-50 px-4 py-2 rounded-lg">Nosotros</a>
+            <a href="#productos" class="hover:bg-blue-50 px-4 py-2 rounded-lg">Productos</a>
+            <a href="#carrito" class="hover:bg-blue-50 px-4 py-2 rounded-lg">Carrito (<span id="contador">0</span>)</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Inicio: dos columnas en escritorio, una en celular. -->
+        <section id="inicio" class="max-w-6xl mx-auto px-6 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-center">
+            <div>
+                <p class="text-blue-700 font-bold mb-4">MATIUS CORP · SOLUCIONES DIGITALES</p>
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Tu negocio tiene una idea.<br><span class="text-blue-600">Nosotros la llevamos a la web.</span></h1>
+                <p class="text-lg text-gray-600 mb-8">Páginas web, sistemas y soporte para dar el siguiente paso. Encuentra la solución que necesitas en un solo lugar.</p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="#productos" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-lg">Explorar soluciones →</a>
+                    <a href="#nosotros" class="bg-white border border-blue-200 text-blue-700 px-6 py-3 rounded-lg">Conócenos</a>
+                </div>
+                <p class="mt-6 text-sm text-gray-600">Desarrollo web · Organización de información · Soporte</p>
+            </div>
+            <div class="bg-blue-950 text-white rounded-2xl p-6 md:p-8 shadow-lg">
+                <div class="flex gap-2 mb-6" aria-hidden="true"><span class="w-3 h-3 rounded-full bg-red-400"></span><span class="w-3 h-3 rounded-full bg-yellow-400"></span><span class="w-3 h-3 rounded-full bg-green-400"></span></div>
+                <p class="text-blue-300 text-sm mb-4">De la idea a una solución</p>
+                <p class="text-5xl font-bold mb-6" aria-hidden="true">&lt;/&gt;</p>
+                <h2 class="text-2xl font-bold mb-4">Construimos tu presencia digital.</h2>
+                <div class="bg-blue-900 rounded-lg p-4 mb-3"><p class="text-blue-200 text-sm">01 / PRESENTA</p><p class="font-bold mt-1">Una web para tu negocio</p></div>
+                <div class="bg-blue-900 rounded-lg p-4"><p class="text-blue-200 text-sm">02 / ORGANIZA</p><p class="font-bold mt-1">Herramientas para trabajar mejor</p></div>
+            </div>
+        </section>
+        <section id="nosotros" class="bg-white border-y border-blue-100">
+            <div class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8">
+                <div><p class="text-blue-600 font-bold mb-2">SOBRE NOSOTROS</p><h2 class="text-3xl font-bold mb-4">Tecnología clara y útil.</h2><p class="text-gray-600">Matius Corp nace para ayudar a negocios y emprendimientos a tener presencia en internet.</p></div>
+                <div><h3 class="text-xl font-bold mb-3">Nuestra misión</h3><p class="text-gray-600">Crear soluciones digitales útiles, claras y fáciles de manejar.</p><h3 class="text-xl font-bold mt-6 mb-3">Nuestra visión</h3><p class="text-gray-600">Crecer como empresa de programación y ofrecer un buen servicio a cada cliente.</p></div>
+                <div class="bg-blue-50 rounded-xl p-6"><h3 class="text-xl font-bold mb-4">Lo que nos guía</h3><p class="mb-3">01 · Respeto</p><p class="mb-3">02 · Calidad</p><p>03 · Compromiso</p></div>
+            </div>
+        </section>
+
+        <!-- Catálogo: el buscador y las categorías funcionan juntos. -->
+        <section id="productos" class="px-6 py-12 max-w-6xl mx-auto">
+            <p class="text-blue-600 font-bold mb-2">NUESTRO CATÁLOGO</p><h2 class="text-3xl font-bold mb-3">Una solución para cada necesidad.</h2>
+            <p class="mb-6">Explora nuestras soluciones digitales y agrega las que necesitas al carrito.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4 bg-white border border-blue-100 rounded-xl p-5">
+                <div><label for="buscar" class="block font-bold mb-2">Buscar producto</label>
+                <input id="buscar" type="search" placeholder="Ejemplo: página web" class="w-full border rounded-lg p-3"></div>
+                <div><label for="categoria" class="block font-bold mb-2">Categoría</label>
+                <select id="categoria" class="w-full border rounded-lg p-3">
+                    <option value="Todas">Todas las categorías</option>
+                    <option value="Páginas web">Páginas web</option>
+                    <option value="Sistemas">Sistemas</option>
+                    <option value="Soporte">Soporte</option>
+                </select></div>
+            </div>
+            <button id="limpiar" class="text-blue-600 underline mb-4">Limpiar filtros</button>
+            <p id="resultados" class="mb-4" role="status"></p>
+            <div id="catalogo" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <p id="mensaje" class="mt-4 font-bold text-blue-700" role="status"></p>
+        </section>
+        <section id="carrito" class="px-6 py-12 max-w-6xl mx-auto">
+            <div class="bg-blue-950 text-white rounded-2xl p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-white mb-4">Tu carrito</h2>
+                <p id="vacio">Todavía no has agregado productos.</p>
+                <ul id="listaCarrito" class="space-y-4"></ul>
+                <p class="text-xl font-bold mt-6">Total: $<span id="total">0.00</span></p>
+                <button id="vaciar" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg" disabled>Vaciar carrito</button>
+            </div>
+        </section>
+
+        <!-- HERRAMIENTAS -->
+        <section class="bg-white border-t border-blue-100 p-8">
+            <h2 class="text-2xl font-bold text-center mb-4">Herramientas que usamos</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <div class="bg-blue-50 text-blue-600 p-4 rounded-lg text-center font-bold">HTML</div>
+                <div class="bg-blue-50 text-blue-600 p-4 rounded-lg text-center font-bold">CSS</div>
+                <div class="bg-blue-50 text-blue-600 p-4 rounded-lg text-center font-bold">Tailwind</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-blue-950 text-blue-100 p-6 text-center">
+        <p class="font-bold">Matius Corp</p>
+        <p>Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

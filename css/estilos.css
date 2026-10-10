@@ -1,0 +1,10 @@
+/* Estilos sencillos. Tailwind se encarga de columnas y tamaños responsivos. */
+body { font-family: Arial, sans-serif; color: #172554; }
+section { scroll-margin-top: 20px; }
+button, select { cursor: pointer; }
+button:disabled { opacity: .45; cursor: default; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+    outline: 3px solid #60a5fa; outline-offset: 3px;
+}
+.producto { display: flex; flex-direction: column; }
+.producto p { flex-grow: 1; }
